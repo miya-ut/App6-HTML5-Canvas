@@ -51,6 +51,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		contextName.font = "30px Courier New";
 		contextName.fillText("Miya Walker", 10, 50);
 	} // The above code creates the function that draws my name on the canvas. 
+	
+	var canvasImage = document.getElementById('drawingBoard');
+	var context = canvasImage.getContext("2d");
+	var peony = new Image();
+	peony.src = "https://images.unsplash.com/photo-1560583035-6d14e41fac5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80";
+	peony.onload = function() {
+		context.drawImage(peony, 0, 0);
+	}; // The above code creates the function that draws an image on the canvas.
 </script>
 
 
@@ -96,6 +104,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<button onclick="drawName();" class="w3-btn w3-black"> Name </button>
 		<!-- The code above creates a button that draws my name using the drawName() function. -->
+	
+	<button onclick="peony.onload;" class="w3-btn w3-black"> Image </button?=>
+		<!-- The code above creates a button that draws an image using the peony.onload function. -->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
