@@ -52,13 +52,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		contextName.fillText("Miya Walker", 10, 50);
 	} // The above code creates the function that draws my name on the canvas. 
 	
-	var canvasImage = document.getElementById('drawingBoard');
-	var context = canvasImage.getContext("2d");
-	var peony = new Image();
-	peony.src = "https://www.calloways.com/wp-content/uploads/sarah-bernhardt-peony-0773401189-01.jpg";
-	peony.onload = function() {
-		context.drawImage(peony, 0, 0);
-	}; // The above code creates the function that draws an image on the canvas.
+	function loadImage() {
+		var canvasImage = document.getElementById('drawingBoard');
+		var context = canvasImage.getContext("2d");
+		var peony = new Image();
+		peony.src = "https://www.calloways.com/wp-content/uploads/sarah-bernhardt-peony-0773401189-01.jpg";
+		peony.onload = function() {
+			context.drawImage(peony, 0, 0);
+		}; 
+	} // The above code creates the function that draws an image on the canvas.
 	
 	function canvasReset() {
 		var canvasBlank = document.getElementById('drawingBoard');
@@ -110,8 +112,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<button onclick="drawName();" class="w3-btn w3-black"> Name </button>
 		<!-- The code above creates a button that draws my name using the drawName() function. -->
 	
-	<button onclick="peony.onload;" class="w3-btn w3-black"> Image </button>
-		<!-- The code above creates a button that draws an image using the peony.onload function. -->
+	<button onclick="loadImage;" class="w3-btn w3-black"> Image </button>
+		<!-- The code above creates a button that draws an image using the loadImage function. -->
 	
 	<button onclick="canvasReset();" class="w3-btn w3-black"> Reset </button>
 		<!-- The code above creates a button that resets the canvas using the canvasReset() function. -->
