@@ -59,6 +59,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	peony.onload = function() {
 		context.drawImage(peony, 0, 0);
 	}; // The above code creates the function that draws an image on the canvas.
+	
+	function canvasReset() {
+		var canvasBlank = document.getElementById('drawingBoard');
+		canvasBlank.width = canvasBlank.width;
+	} // The code above creates the function that resets the canvas.
 </script>
 
 
@@ -107,6 +112,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<button onclick="peony.onload;" class="w3-btn w3-black"> Image </button>
 		<!-- The code above creates a button that draws an image using the peony.onload function. -->
+	
+	<button onclick="canvasReset();" class="w3-btn w3-black"> Reset </button>
+		<!-- The code above creates a button that resets the canvas using the canvasReset() function. -->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
