@@ -56,8 +56,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		var canvasImage = document.getElementById("drawingBoard");
 		var context = canvasImage.getContext("2d");
 		var peony = new Image();
-		peony.src = "https://www.calloways.com/wp-content/uploads/sarah-bernhardt-peony-0773401189-01.jpg";
-		context.drawImage(peony, 10, 10); 
+		peony.src = "peony.jpg";
+		peony.onload = function() {
+			context.drawImage(peony, 10, 10); 
+		};
 	} // The above code creates the function that draws an image on the canvas.
 	
 	function canvasReset() {
