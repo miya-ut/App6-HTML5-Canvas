@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Miya Walker
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -35,9 +35,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	
+	function drawRectangle() {
+		var canvasRectangle = document.getElementById('drawingBoard');
+		var contextRectangle = canvasRectangle.getContext("2d");
+		contextRectangle.fillRect(50, 25, 150, 100);
+	} // The above code creates the function that draws a rectangle on the canvas.
 </script>
 
 
@@ -65,11 +71,22 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
+// The code above creates the header for the app. 
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
-		
+	<p>Start creating below!</p>
+	
+	<canvas id="drawingBoard" width="75vw" height="50vw" style="border: 1px solid #000000;"></canvas>
+		<!-- <canvas> creates the canvas. id= assigns the canvas a name. the width and height conditions 
+		specify the dimensions of the canvas. "75vw" means that the canvas will be as wide as 75% of the 
+		viewport or screen. The border around the canvas is created with the style condition. -->
+	
+	<p>Add elements to the canvas using the following buttons.</p>
+	
+	<button onclick="drawRectangle();" class="w3-btn w3-black"> Rectangle </button>
+		// The code above creates a button that draws a rectangle using the drawRectangle() function.
+	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
@@ -77,6 +94,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
+// The code above creates the footer for the app. 
 
 </body>
 </html>
