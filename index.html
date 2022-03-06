@@ -52,13 +52,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		contextName.fillText("Miya Walker", 10, 50);
 	} // The above code creates the function that draws my name on the canvas. 
 	
-	function displayImage() {
+	<img id="peony" src="https://cdn.pixabay.com/photo/2015/06/27/17/23/flower-823655_960_720.jpg" width="120" height="115">
+	window.onload = function displayImage() {
 		var canvasImage = document.getElementById('drawingBoard');
 		var contextImage = canvasImage.getContext("2d");
-		var image = newImage();
-		image.src = "https://cdn.pixabay.com/photo/2015/06/27/17/23/flower-823655_960_720.jpg";
-		image.onload = function loadImage() {
-			context.drawImage(image, 0, 0);
+		var peony = document.getElementById("peony");
+		contextImage.drawImage(peony, 0, 0);
 		};
 	} // The above code creates the function that draws the image on the canvas. 
 </script>
