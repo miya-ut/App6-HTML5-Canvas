@@ -52,14 +52,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		contextName.fillText("Miya Walker", 10, 50);
 	} // The above code creates the function that draws my name on the canvas. 
 	
-	function loadImage() {
-		var canvasImage = document.getElementById('drawingBoard');
+	<!-- function loadImage() {
+		var canvasImage = document.getElementById("drawingBoard");
 		var context = canvasImage.getContext("2d");
 		var peony = new Image();
 		peony.src = "https://www.calloways.com/wp-content/uploads/sarah-bernhardt-peony-0773401189-01.jpg";
 		peony.onload = function() {
 			context.drawImage(peony, 0, 0);
 		}; 
+	} -->
+	function loadImage() {
+		<img src="https://880901.smushcdn.com/2054605/wp-content/uploads/2021/10/Mask-Group-17.png?lossy=1&strip=1&webp=1" alt="genetworx.com">
+		var canvasImage = document.getElementById("drawingBoard");
+		var context = canvasImage.getContext("2d");
+		var img = document.getElementById("genetworx.com");
+		context.drawImage(img, 10, 10);
 	} // The above code creates the function that draws an image on the canvas.
 	
 	function canvasReset() {
